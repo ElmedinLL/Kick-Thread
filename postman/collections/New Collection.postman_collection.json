@@ -1,0 +1,29 @@
+{
+  "info": {
+    "_postman_id": "5f3dd18f-bfe9-4f88-bf98-eeae0432a80d",
+    "name": "Test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Weather",
+      "id": "fe350d2a-a7ed-4fc4-aeb0-cbd8e6b24c62",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:5001/weatherforecast",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "weatherforecast"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

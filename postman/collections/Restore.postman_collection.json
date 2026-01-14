@@ -1,0 +1,1459 @@
+{
+  "info": {
+    "_postman_id": "9e2532a9-39e6-4879-9770-262231964ee2",
+    "name": "Kick&Thread",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Section2",
+      "item": [
+        {
+          "name": "Get Weatherforecast",
+          "id": "035005f9-e770-4ee1-89b7-4f0ce9494821",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/weatherforecast",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "weatherforecast"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Product List",
+          "id": "64d5bb66-e715-440e-bf2c-7f7528f113d3",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/products",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Product",
+          "id": "8721fdb4-4cdd-4789-aa60-c784aecc239d",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/products/2",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "54c27120-1359-4029-ab61-5d4fdde76319"
+    },
+    {
+      "name": "Section6",
+      "item": [
+        {
+          "name": "Not found error",
+          "id": "7a0e3869-2d73-439f-b0d4-c0db9a0228d9",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/buggy/not-found",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "buggy",
+                "not-found"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bad request error",
+          "id": "9cacfe0c-a386-41a4-bc39-de38859cad9b",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/buggy/bad-request",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "buggy",
+                "bad-request"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Unauthorised error",
+          "id": "87b057f2-a908-420d-87de-cdaff0c3da0e",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/buggy/unauthorized",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "buggy",
+                "unauthorized"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Validation error",
+          "id": "56e8d90d-83c5-450c-b80a-a5cd5bc2f381",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/buggy/validation-error",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "buggy",
+                "validation-error"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Server error",
+          "id": "2fc61a96-14e7-4860-a6ad-510aae2afd6b",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/buggy/server-error",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "buggy",
+                "server-error"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "310ac7db-11e4-474e-b3e9-67d10de910b9"
+    },
+    {
+      "name": "Section7",
+      "item": [
+        {
+          "name": "Get Basket",
+          "id": "ff23ec99-07c4-4a2a-9c13-447e800009ee",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/basket",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "basket"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add item to basket",
+          "id": "f14b072c-8995-46fc-8491-f396f07a0796",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/basket?productId=2&quantity=1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "basket"
+              ],
+              "query": [
+                {
+                  "key": "productId",
+                  "value": "2"
+                },
+                {
+                  "key": "quantity",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Remove item from basket",
+          "id": "aa5146f9-2a95-41d8-a5c6-2ac192b12c8b",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/basket?productId=2&quantity=4",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "basket"
+              ],
+              "query": [
+                {
+                  "key": "productId",
+                  "value": "2"
+                },
+                {
+                  "key": "quantity",
+                  "value": "4"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "963ba772-6adf-4fed-bb2f-d37dfb640632"
+    },
+    {
+      "name": "Section8",
+      "item": [
+        {
+          "name": "Get Products OrderedBy",
+          "id": "6fb712b1-6ff4-452c-bd8c-a54de0aff59a",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/products?orderBy=priceDesc",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "orderBy",
+                  "value": "priceDesc"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search products",
+          "id": "18d35c5e-83ef-4fcb-9f77-47a63f187f02",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/products?searchTerm=red",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "searchTerm",
+                  "value": "red"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search & order products",
+          "id": "62fd1703-58d7-4034-8d54-4f08df51eeae",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/products?searchTerm=red&orderBy=priceDesc",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "searchTerm",
+                  "value": "red"
+                },
+                {
+                  "key": "orderBy",
+                  "value": "priceDesc"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter products brands",
+          "id": "66758ec5-f5fc-4a46-81b5-a18190ee6ab1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/products?brands=angular,react",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "brands",
+                  "value": "angular,react"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter products types",
+          "id": "9d51a1dc-19ec-4e3e-b54b-0fc42eac5f86",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/products?types=boots",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "types",
+                  "value": "boots"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter brands&types",
+          "id": "c3dc33ba-9869-44f6-8c21-805dbc9aeb71",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/products?types=boots&brands=redis,angular",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "types",
+                  "value": "boots"
+                },
+                {
+                  "key": "brands",
+                  "value": "redis,angular"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pagination",
+          "id": "f5095bf2-4c9f-4b21-a447-4f5c79c715b8",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/products",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "pageNumber",
+                  "value": "1",
+                  "disabled": true
+                },
+                {
+                  "key": "pageSize",
+                  "value": "2",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Filters",
+          "id": "4524d57e-ee3f-4f0d-ac52-b21a73a1039e",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/products/filters",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "filters"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "2ebe6e72-97c8-4a41-ba0e-168bec1238ee"
+    },
+    {
+      "name": "Section9",
+      "item": [
+        {
+          "name": "Login JWT",
+          "id": "29b4e25f-99c1-4f44-9514-083442a06af2",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"bob@test.com\",\n    \"password\": \"Pa$$w0rd\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/login",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login cookie",
+          "id": "074a76c3-e226-4297-9962-6cc9ee4a1561",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"bob@test.com\",\n    \"password\": \"Pa$$w0rd\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/login?useCookies=true",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "login"
+              ],
+              "query": [
+                {
+                  "key": "useCookies",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RegisterUser",
+          "id": "b09c3517-1569-44e8-9a9c-492d17345200",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"tom@test.com\",\n    \"password\": \"Pa$$w0rd\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/account/register",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "account",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RegisterUser Duplicate username",
+          "id": "90f1e2ed-dc03-4cd4-ad78-5bc7bcd2ae5b",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"bob@test.com\",\n    \"password\": \"Pa$$w0rd\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/account/register",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "account",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RegisterUser Weak password",
+          "id": "4514a525-3dc1-4c25-b212-8f9073a35e75",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"bob@test.com\",\n    \"password\": \"letmein\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/account/register",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "account",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get default user info",
+          "id": "3c092c5a-4483-40cc-966a-45f86719488c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/manage/info",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "manage",
+                "info"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get custom user info",
+          "id": "f90116a4-f061-4ca1-9ef1-2e4892419797",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/account/user-info",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "account",
+                "user-info"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login admin",
+          "id": "c473058b-0f80-4096-970d-2f19f912f48a",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"admin@test.com\",\n    \"password\": \"Pa$$w0rd\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/login?useCookies=true",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "login"
+              ],
+              "query": [
+                {
+                  "key": "useCookies",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update address",
+          "id": "4ee1d777-a32d-493d-aaa4-0c7acaff7dc8",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Bob Bobbity\",\n    \"line1\": \"100 Park Lane\",\n    \"city\": \"London\",\n    \"state\": \"London\",\n    \"postal_code\": \"SW1 1BD\",\n    \"country\": \"GB\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/account/address",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "account",
+                "address"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Address",
+          "id": "60207bb3-8a53-4246-9ee2-7f97bde6af86",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/account/address",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "account",
+                "address"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "665b9ddf-e0ec-4b36-8b89-2e16048b8a8b"
+    },
+    {
+      "name": "Section10",
+      "item": [
+        {
+          "name": "Login cookie",
+          "id": "e6e723db-7666-4290-866d-65d6b4a67d45",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"bob@test.com\",\n    \"password\": \"Pa$$w0rd\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/login?useCookies=true",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "login"
+              ],
+              "query": [
+                {
+                  "key": "useCookies",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Basket",
+          "id": "3d918b57-6870-47db-9b00-c0fff7b956ed",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/basket",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "basket"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add item to basket",
+          "id": "2b34bd4a-deac-4f04-a588-60b91142e7c4",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/basket?productId=2&quantity=1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "basket"
+              ],
+              "query": [
+                {
+                  "key": "productId",
+                  "value": "2"
+                },
+                {
+                  "key": "quantity",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create payment intent",
+          "id": "2dc033d6-71eb-4ea5-a280-492877f2fae6",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/payments",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "payments"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "8223ef58-4c61-41cd-bfd9-6fb10d44f1f0"
+    },
+    {
+      "name": "Section11",
+      "item": [
+        {
+          "name": "Create order",
+          "id": "8644503e-d5d2-43e3-b713-1ed066a0b816",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"shippingAddress\": {\n        \"name\": \"Bob Test\",\n        \"city\": \"New York\",\n        \"country\": \"US\",\n        \"line1\": \"100 Centre Street\",\n        \"line2\": null,\n        \"postal_code\": \"10013\",\n        \"state\": \"NY\"\n    },\n    \"paymentSummary\": {\n        \"last4\": 1234,\n        \"brand\": \"VISA\",\n        \"expMonth\": 12,\n        \"expYear\": 2030\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/orders",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Orders",
+          "id": "a2734283-ebfb-45b3-99a8-1d4f4b93651d",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/orders",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Order Details",
+          "id": "8d8d1ead-3209-4798-b00d-41f79519075e",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/orders/1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "6bc00045-bfc3-49e2-9043-a138a716b7f6"
+    },
+    {
+      "name": "Section13",
+      "item": [
+        {
+          "name": "Login as Admin",
+          "id": "86822aad-6744-44e4-bc19-dc6e7666cf7d",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"admin@test.com\",\n    \"password\": \"Pa$$w0rd\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/login?useCookies=true",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "login"
+              ],
+              "query": [
+                {
+                  "key": "useCookies",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login as Bob",
+          "id": "049899f7-ffdd-4c76-93f3-ebf717ee3288",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"bob@test.com\",\n    \"password\": \"Pa$$w0rd\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/login?useCookies=true",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "login"
+              ],
+              "query": [
+                {
+                  "key": "useCookies",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get user info",
+          "id": "3a0f36c5-4065-43ec-8604-76afc38f21a7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/account/user-info",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "account",
+                "user-info"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Product",
+          "id": "63c2b3aa-e6bf-452b-9054-a6c03789828d",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"{{$randomProductName}}\",\n    \"description\": \"{{$randomLoremParagraph}}\",\n    \"price\": 2000,\n    \"pictureUrl\": \"https://picsum.photos/500\",\n    \"type\": \"Hats\",\n    \"brand\": \"Angular\",\n    \"quantityInStock\": 100\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/products",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Product With File",
+          "id": "4caf01d9-cf03-4453-9143-6f58c76f45de",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "{{$randomProductName}}",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "{{$randomLoremParagraph}}",
+                  "type": "text"
+                },
+                {
+                  "key": "price",
+                  "value": "2000",
+                  "type": "text"
+                },
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": [
+                    "/Users/neilc/Projects/RestoreCourse/demo/Restore/client/public/images/products/boot-ang1.png"
+                  ]
+                },
+                {
+                  "key": "type",
+                  "value": "Hats",
+                  "type": "text"
+                },
+                {
+                  "key": "brand",
+                  "value": "Angular",
+                  "type": "text"
+                },
+                {
+                  "key": "quantityInStock",
+                  "value": "100",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{url}}/api/products",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edit Product",
+          "id": "727a2aed-1629-44b0-ab7c-819aa22a26a5",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": 19,\n    \"name\": \"{{$randomProductName}} Updated\",\n    \"description\": \"{{$randomLoremParagraph}}\",\n    \"price\": 2000,\n    \"pictureUrl\": \"https://picsum.photos/500\", \n    \"type\": \"Hats\",\n    \"brand\": \"Angular\",\n    \"quantityInStock\": 100\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/products",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edit Product With File",
+          "id": "059fcace-4e38-498d-b99e-ca96e7392baf",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "{{$randomProductName}} Updated",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "{{$randomLoremParagraph}}",
+                  "type": "text"
+                },
+                {
+                  "key": "price",
+                  "value": "2000",
+                  "type": "text"
+                },
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": [
+                    "/Users/neilc/Projects/RestoreCourse/demo/Restore/client/public/images/products/glove-react1.png"
+                  ]
+                },
+                {
+                  "key": "type",
+                  "value": "Hats",
+                  "type": "text"
+                },
+                {
+                  "key": "brand",
+                  "value": "Angular",
+                  "type": "text"
+                },
+                {
+                  "key": "quantityInStock",
+                  "value": "100",
+                  "type": "text"
+                },
+                {
+                  "key": "id",
+                  "value": "20",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{url}}/api/products",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Product",
+          "id": "3e993abf-42b4-4a7f-936b-a1d1c2b7a807",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/products/19",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "19"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete product",
+          "id": "8fb32e2a-e576-4acc-9ac1-b7cde64c5360",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/products/19",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "19"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "a443fc42-75b6-4944-bc95-b8dbb0edf23a"
+    },
+    {
+      "name": "Challenge",
+      "item": [
+        {
+          "name": "Get Basket",
+          "id": "0937c288-ec94-4844-8d29-28e1e0ec6051",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/basket",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "basket"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add item to basket",
+          "id": "0f85ff62-87d8-42ca-8102-5a4467d4c85c",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/basket?productId=2&quantity=1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "basket"
+              ],
+              "query": [
+                {
+                  "key": "productId",
+                  "value": "2"
+                },
+                {
+                  "key": "quantity",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create payment intent",
+          "id": "aa3687bd-fab4-40aa-a998-df1dcf500679",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/payments",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "payments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update basket with coupon code",
+          "id": "4dc05b22-ad4a-4c4d-bda3-e6680a2ce2a7",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/basket/GIMME10",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "basket",
+                "GIMME10"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete coupon from basket",
+          "id": "199397f5-a02a-468d-8188-b3f25802e9a9",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/api/basket/remove-coupon",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "basket",
+                "remove-coupon"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create order",
+          "id": "bab6f27d-791d-4065-930d-66048ba10a6d",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"shippingAddress\": {\n        \"name\": \"Bob Test\",\n        \"city\": \"New York\",\n        \"country\": \"US\",\n        \"line1\": \"100 Centre Street\",\n        \"line2\": null,\n        \"postal_code\": \"10013\",\n        \"state\": \"NY\"\n    },\n    \"paymentSummary\": {\n        \"last4\": 1234,\n        \"brand\": \"VISA\",\n        \"expMonth\": 12,\n        \"expYear\": 2030\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/orders",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "54bfb217-379f-4b47-95be-51e4bb9d593a"
+    }
+  ],
+  "variable": [
+    {
+      "id": "b952df3d-5fa8-41f3-839d-ce4d8c563849",
+      "key": "url",
+      "value": "https://localhost:5001",
+      "type": "string"
+    }
+  ]
+}
