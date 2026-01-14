@@ -43,3 +43,9 @@ publish/
 # ASP.NET Core
 appsettings.*.json
 wwwroot/
+
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.db-journal
