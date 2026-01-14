@@ -1,0 +1,45 @@
+# Build folders
+bin/
+obj/
+out/
+
+# VS / IDE files
+.vs/
+*.user
+*.suo
+*.sln.docstates
+.vscode/
+.idea/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Runtime files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.db
+*.sqlite
+*.db-journal
+*.DS_Store
+
+# Logs
+*.log
+TestResults/
+coverage/
+
+# Publish outputs
+publish/
+
+# Backups / temp files
+*.bak
+*.backup
+*.swp
+
+# ASP.NET Core
+appsettings.*.json
+wwwroot/
