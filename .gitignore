@@ -1,1 +1,34 @@
-API/appsettings.json
+##################################
+# .NET / ASP.NET Core
+##################################
+
+# Build folders
+bin/
+obj/
+out/
+publish/
+
+# Runtime files
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# ASP.NET Core - IGNORE environment-specific configs
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Staging.json
+wwwroot/
+
+# Databases
+*.db
+*.sqlite
+*.db-shm
+*.db-wal
+*.db-journal
