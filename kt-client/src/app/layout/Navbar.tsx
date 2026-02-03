@@ -3,6 +3,7 @@ import {
   Badge,
   Box,
   IconButton,
+  LinearProgress,
   List,
   ListItem,
   Toolbar,
@@ -10,6 +11,8 @@ import {
 } from "@mui/material";
 import { DarkMode, LightMode, ShoppingCart } from "@mui/icons-material";
 import { NavLink } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../store/store";
+import { setDarkMode } from "./uiSlice";
 
 const midLinks = [
   { title: "catalog", path: "/catalog" },
@@ -25,7 +28,7 @@ const navStyles = {
     color: "rgba(236, 235, 235, 0.49)",
   },
   "&.active": {
-    color: "#212323",
+    color: "#758181",
   },
 };
 
@@ -34,20 +37,21 @@ const rightLinks = [
   { title: "register", path: "/register" },
 ];
 
-type Props = {
-  toogleDarkMode: () => void;
-  darkMode: boolean;
-};
 
-function Navbar({ toogleDarkMode, darkMode }: Props) {
+
+function Navbar() {
+
+  const {isLoading , darkMode} = useAppSelector(state => state.ui);
+  const dispatch = useAppDispatch();
+
   return (
-    <AppBar sx={{ backgroundColor: "#1c4f69" }} position="fixed">
+    <AppBar sx={{ backgroundColor: "#333636" }} position="fixed">
       <Toolbar sx={{ flex: "row", justifyContent: "space-between" }}>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Typography sx={navStyles} component={NavLink} to="/" variant="h6">
             KICK&THREAD
           </Typography>
-          <IconButton onClick={toogleDarkMode}>
+          <IconButton onClick={() => dispatch(setDarkMode())}>
             {darkMode ? <DarkMode /> : <LightMode sx={{ color: "yellow" }} />}
           </IconButton>
         </Box>
@@ -78,6 +82,11 @@ function Navbar({ toogleDarkMode, darkMode }: Props) {
           </List>
         </Box>
       </Toolbar>
+      {isLoading && (
+        <Box sx={{width:'100%'}}>
+          <LinearProgress color="primary"/>
+        </Box>
+      )}
     </AppBar>
   );
 }
