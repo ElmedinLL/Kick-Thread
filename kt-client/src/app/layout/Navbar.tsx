@@ -45,7 +45,13 @@ function Navbar() {
   const dispatch = useAppDispatch();
 
   return (
-    <AppBar sx={{ backgroundColor: "#333636" }} position="fixed">
+    <AppBar
+      position="fixed"
+      sx={{
+        backgroundColor: darkMode ? "#1e293b" : "#334155",
+        boxShadow: darkMode ? "0 1px 3px rgba(0,0,0,0.3)" : "0 1px 3px rgba(0,0,0,0.08)",
+      }}
+    >
       <Toolbar sx={{ flex: "row", justifyContent: "space-between" }}>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Typography sx={navStyles} component={NavLink} to="/" variant="h6">

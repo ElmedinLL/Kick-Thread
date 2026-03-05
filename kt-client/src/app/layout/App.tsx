@@ -23,7 +23,8 @@ function App() {
     palette: {
       mode: palleteType,
       background: {
-        default: palleteType === "light" ? "#eaeaea" : "#121212",
+        default: palleteType === "light" ? "#f8fafc" : "#0f172a",
+        paper: palleteType === "light" ? "#ffffff" : "#1e293b",
       },
     },
   });
@@ -37,8 +38,8 @@ function App() {
           py: 6,
           minHeight: "100vh",
           background: darkMode
-            ? "radial-gradient(circle at top, #0b1a2a 0%, #102c45 50%, #1c3f5a 100%)"
-            : "linear-gradient(135deg, #80929f 0%, #F0F7FF 100%)",
+            ? "linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)"
+            : "linear-gradient(180deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%)",
         }}>
         <Container maxWidth="xl" sx={{ marginTop: 8 }}>
           <Outlet />
